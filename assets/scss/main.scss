@@ -1,21 +1,112 @@
-.testing {
-  .within-testing {
-    width: auto;
+* {
+  font-family: Segoe UI Light;
+}
+
+%flex {
+  display: flex;
+}
+
+header {
+  @extend %flex;
+  background-color: gray;
+  color: white;
+
+  justify-content: space-between;
+  align-items: center;
+
+  nav {
+  background-color: gray;
+    @extend %flex;
+    align-items: center;
+
+    .logo {
+      max-width: 100px;
+    }
+    ul {
+      @extend %flex;
+      // align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      li {
+        margin: 0 20px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+      }
+    }
+  }
+
+  .user-settings {
+    margin-right: 20px;
+    .avatar {
+      max-width: 50px;
+      border-radius: 50%;
+    }
   }
 }
 
-.test-refresh {
-  width: auto;
-}
+.table {
 
-.test-refresh2 {
-  width: auto;
+  [class^="col"] {
+    border: 1px solid black;
+    width: 20%;
+    text-align: center;
+    word-wrap: break-word;
+    
+    &:first-child {
+      border-left: 2px solid black;
+    }
+    &:last-child {
+      border-right: 2px solid black;
+    }
+  }
+
+  .headers {
+    @extend %flex;
+    flex-wrap: nowrap;
+
+    [class^="col"] {
+      border-top-width: 2px;
+    }
+  }
+
+  .content {
+    .row {
+      @extend .headers;
+
+      [class^="col"] {
+        border-top-width: 1px;
+        border-bottom-width: 2px;
+      }
+    }
+  }
 }
 
 .parent {
-  border: 1px solid black;
+  border: 3px solid green;
 }
 
 .item {
-  background-color: red;
+  background-color: #7171da;
+  margin: 5px;
+  text-align: center;
+  color: white;
+  line-height: 40px;
+}
+
+.parent {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 200px;
+
+}
+
+.item {
+  width: 100px;
+  align-content: center;
 }
