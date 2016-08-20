@@ -1,0 +1,20 @@
+{
+  "name": "flex",
+  "version": "1.0.0",
+  "description": "flex test",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-sass": "^2.3.2",
+    "mocha": "^3.0.2",
+    "should": "^11.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
